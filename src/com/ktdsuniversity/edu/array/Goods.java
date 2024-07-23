@@ -11,4 +11,24 @@ public class Goods {
 		this.goodsPrice = goodsPrice;
 		this.goodsStock = goodsStock;
 	}
+	
+	public String getGoodsName() {
+		return goodsName;
+	}
+	
+	public int getGoodsPrice() {
+		return goodsPrice;
+	}
+	
+	public int getGoodsStock() {
+		return goodsStock;
+	}
+	
+	public void decreaseGoodsStock(int orderNumber) {
+		if(this.goodsStock >= orderNumber) {
+			this.goodsStock -= orderNumber;
+		}else {
+			System.out.println("재고가 부족합니다");
+		}
+	}
 }
