@@ -3,16 +3,16 @@ package com.ktdsuniversity.edu.array;
 public class Seller {
 
 	private Goods[] goods;
-	
+
 	public Seller(Goods[] goods) {
 		this.goods = goods;
 	}
-	
-	public void sell(String goodsName, int orderNumber ) {
-		for(int i = 0; i < goods.length; i++) {
-			if(goods[i].getGoodsName().equals(goodsName)) {
+
+	public void sell(String goodsName, int orderNumber) {
+		for (int i = 0; i < goods.length; i++) {
+			if (goods[i].getGoodsName().equals(goodsName)) {
 				int goodsStock = goods[i].getGoodsStock();
-				if(goodsStock < orderNumber || goodsStock == 0) {
+				if (goodsStock < orderNumber || goodsStock == 0) {
 					System.out.println("판매할 수 없습니다");
 					return;
 				}
